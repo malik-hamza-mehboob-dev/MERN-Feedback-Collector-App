@@ -21,7 +21,7 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-require('./routes/authRouutes')(app);
+require('./routes/authRoutes')(app);
 
 // Dynamic Port to listen to for Heroku || localhost:5000
 const PORT = process.env.PORT || 5000;
