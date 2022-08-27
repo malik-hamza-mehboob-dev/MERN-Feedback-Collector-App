@@ -1,10 +1,8 @@
 const express = require('express');
-const app = express();
+require('./services/passport');
 
-// Route Handler
-app.get('/',(req,res)=>{
-    res.send({hi:'there are you !'});
-});
+const app = express();
+require('./routes/authRouutes')(app);
 
 // Dynamic Port to listen to for Heroku || localhost:5000
 const PORT = process.env.PORT || 5000;
